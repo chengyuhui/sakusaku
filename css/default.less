@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@import "kimochi/kimochi.less";
+@import "../bower_components/ngprogress/ngProgress.css";
+
+body {
+  overflow: hidden;
+}
+
+#fgCtrl {
+  .fixed;
+  .no-overflow;
+  width:auto;
+  height:auto;
+  margin-top:3px;
+  margin-left:3px;
+  background:rgba(0,0,0,0.45);
+  border-radius:5px;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+#fgCtrl:hover{
+  background:rgba(0,0,0,0.65);
+}
+
+#fgCtrl > img {
+  max-height:190px;
+  max-width:120px;
+  margin-bottom: 3px;
+}
+
+#fgDir {
+  .font-white;
+  width:auto;
+  height:auto;
+  min-width:120px;
+  min-height:140px;
+  max-height:350px;
+  overflow-y:scroll;
+  background:rgba(0,0,0,0.45);
+  border-radius:5px;
+  .fixed;
+  bottom: 3px;
+  left:3px
+}
+
+#fgDir >ul {
+  .relative;
+  left:-8px;
+  top:3px;
+}
+
+#fgDir > ul > li {
+  list-style: none inside;
+  padding:7px;
+  border-radius: 5px;
+  -webkit-transition: background 0.2s linear;
+}
+
+#fgDir > ul > li:hover{
+  -webkit-transition: background 0.2s linear;
+  background:rgba(0,0,0,0.75);
+}
+
+#fgImg {
+  #fgDir;
+  max-height:480px;
+}
+
+#fgImg > ul >li >div>img{
+  max-height:350px;
+  max-width:400px;
+}
+
+#fgImg >ul>li{
+  list-style: none inside;
+  display:inline;
+  border-radius:5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#fgImg >ul>li>div {
+  -webkit-transition: background 0.2s linear;
+  border-radius: 5px;
+  margin:3px
+}
+
+#fgImg >ul>li>div:hover {
+  -webkit-transition: background 0.2s linear;
+  background: rgba(0,0,0,.45);
+}
+
+#bgCtrl {
+  #fgCtrl;
+  right:3px;
+}
+
+#bgCtrl > img {
+  max-height:190px;
+  max-width:120px;
+  margin-bottom: 3px;
+}
+
+#bgCtrl:hover{
+  background:rgba(0,0,0,0.65);
+}
+
+#bgImg {
+  #fgDir;
+  max-height:480px;
+}
+
+#bgImg > ul >li >div>img{
+  max-height:350px;
+  max-width:400px;
+}
+
+#bgImg >ul>li{
+  list-style: none inside;
+  display:inline;
+  border-radius:5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#bgImg >ul>li>div {
+  margin:3px
+}
+
+
+#posCtrl {
+  #fgCtrl;
+  right:3px;
+  bottom:3px;
+  padding:10px;
+}
+
+#posCtrl>input{
+  display: inline;
+  margin-right:10px
+}
+#posCtrl>button{
+  margin-top:5px
+}
+
+.vertcnt {
+  position: relative;
+  bottom:50px;
+  left:130px
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+}

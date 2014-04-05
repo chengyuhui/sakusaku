@@ -1,0 +1,40 @@
+doctype html
+html(ng-app="MyApp")
+    head
+        title Test
+        meta(charset="UTF-8")
+        link(rel='stylesheet', href='css/default.css')
+        script.
+            require('nw.gui').Window.get().showDevTools()
+        script(src="bower_components/jquery/dist/jquery.js")
+        script(src="bower_components/angular/angular.js")
+        script(src="lib/jquery.centerIn.js")
+        script(src="bower_components/angular-ui-router/release/angular-ui-router.js")
+        script(src="bower_components/ngprogress/build/ngProgress.js")
+        script(src="app.js")
+    body
+        //
+            #floatCtrl.font-white.no-overflow
+            .pd-1
+                h3 ティナ~
+        #fgCtrl.font-white.align-center(ng-click="$state.go('fgDir')")
+            img(ng-src="{{fgimageSrc}}")
+            br
+            |{{fgimage.dir}}/{{fgimage.file}}
+
+        #bgCtrl.font-white.align-center(ng-click="$state.go('bgImg')")
+            img(ng-src="{{bgimageSrc}}")
+            br
+            |{{bgimage}}
+
+        #posCtrl.font-white.align-center
+            input(type="range",ng-model="xpos",min=-200,max=600)
+            br
+            |x={{xpos}}
+            br
+            button.button.button-blue(ng-click="saveImg()") 保存
+            button.button.button-blue B
+
+        div(ui-view)
+
+        mycanvas(fg-src="{{fgimageSrc}}",bg-src="{{bgimageSrc}}",xpos="{{xpos}}")

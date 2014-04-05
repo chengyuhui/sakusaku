@@ -1,0 +1,6 @@
+#fgImg
+    ul
+        li(ng-repeat="fname in currDir.pics")
+            div
+                img(ng-src="app://host/img/fgimage/{{currDir.dir}}/{{fname}}",ng-click='setFg(currDir.dir,fname)')
+

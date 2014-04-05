@@ -1,0 +1,12 @@
+.idea
+bower_components/
+/*.js
+node_modules/
+default.css
+img/bgimage/*
+img/fgimage/*
+*.dll
+nw.pak
+nw.exe
+index.html
+partial/*.html

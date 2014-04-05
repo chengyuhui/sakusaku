@@ -1,0 +1,26 @@
+{
+  "name": "projectTina",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "神北ティナ",
+  "license": "MIT",
+  "window": {
+    "width": 1280,
+    "height": 720,
+    "toolbar": false,
+    "resizable": false
+  },
+  "webkit": {
+    "page-cache": true
+  },
+  "dependencies": {
+    "fs-extra": "~0.8.1",
+    "okay": "~0.3.0",
+    "lodash": "~2.4.1",
+    "gate": "~0.3.0"
+  }
+}
